@@ -1,4 +1,3 @@
-import sys
 
 def main():
     
@@ -11,9 +10,13 @@ def main():
     print() # Puts space between list and result
 
     # Perform binary search
-    ans = binSearch(dummyList, 187)
+    val = 166
+    ans = binSearch(dummyList, val)
     # Print the index that the value was found at
-    print("The value 187 was found at index: %s" %ans)
+    if ans > 0:
+        print("The value %s was found at index: %s" %(val, ans))
+    else:
+        print("The value %s was not found in the list." %val)
     
 
 def binSearch(arr, target):
